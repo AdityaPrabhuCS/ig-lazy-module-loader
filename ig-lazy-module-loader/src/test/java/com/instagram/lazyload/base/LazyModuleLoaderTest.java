@@ -12,7 +12,7 @@ package com.instagram.lazyload.base;
 import android.app.Activity;
 import android.content.Context;
 import android.os.SystemClock;
-import android.support.v4.app.Fragment;
+import androidx.core.app.Fragment;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;

@@ -11,7 +11,9 @@ package com.instagram.lazyload.base;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.v4.app.Fragment;
+
+import androidx.fragment.app.Fragment;
+
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 
@@ -49,7 +51,7 @@ public class LazyModuleLoader {
 
   /** Convenience methods that loads a module that is known to be a fragment */
   public synchronized SupportFragmentLike loadSupportFragmentModule(
-      Fragment hostingFragment, String moduleName, String className) throws LazyLoadingException {
+          Fragment hostingFragment, String moduleName, String className) throws LazyLoadingException {
     try {
       Class lazyLoadedClass = mLoaderAlgorithm.loadModule(moduleName, className);
       Constructor c = lazyLoadedClass.getConstructor(Fragment.class);
